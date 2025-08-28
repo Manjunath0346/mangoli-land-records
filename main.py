@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -12,9 +11,7 @@ def main():
         print("Starting the script...")
 
         website = "https://landrecords.karnataka.gov.in/Service2/"
-        path = "C:/Windows/chromedriver.exe"
-        service = Service(path)
-        driver = webdriver.Chrome(service=service)
+        driver = webdriver.Chrome()
 
         print("Maximizing the browser window...")
         driver.maximize_window()
